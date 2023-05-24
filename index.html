@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="abc">
+      <div class="d-flex flex-column page">
+        <div class="home_container page--current" id="page1">
+          <h3 class="text-center">
+            “Hüquq və İnsan Haqları İnstitutu” publik hüquqi şəxs
+          </h3>
+          <h5 class="text-center mt-3">
+            “İnsan hüquqlarına giriş” mövzusunda onlayn kurs
+          </h5>
+          <hr class="hr bg-dark" />
+          <!-- <img
+            class="w-100"
+            src="https://humanrights.gov.au/an-introduction-to-human-rights/assets/IySzQCYIEmyj_UGN_IuoQOgLxZiRRt5lh-stock-image.jpg"
+            alt=""
+          /> -->
+          <div>
+            <p class="text-secondary mt-5">
+              Bu qısa kurs sizə insan hüquqları haqqında əsas anlayışların
+              verilməsi məqsədi ilə nəzərdə tutulub. Kurs təxminən 45 dəqiqə
+              davam edəcək. Kurs istənilən şəxs üçün açıqdır, yaş məhdudiyyəti
+              yoxdur və hər hansı təhsil (o cümlədən, hüquq sahəsində) tələb
+              edilmir.
+            </p>
+
+            <h5 class="mt-5 mb-3">Kurs aşağıdakı məzmunu əhatə edir:</h5>
+            <ul>
+              <li>İnsan hüquqları nədir?</li>
+              <li>
+                İnsan hüquqlarının əsas xüsusiyyətləri və prinsipləri
+                hansılardır
+              </li>
+              <li>İnsan hüquqlarının qorunmasına kim cavabdehdir</li>
+            </ul>
+            <h5 class="font-weight-bold mt-5">Kursun nəticələri</h5>
+            <h5 class="mb-3">Bu kursu bitirəndə:</h5>
+            <ul>
+              <li>İnsan hüquqları barədə anlayışınız daha geniş olacaq;</li>
+              <li>
+                İnsan hüquqları və öhdəlikləri arasındakı əlaqəni daha yaxşı
+                biləcəksiniz;
+              </li>
+              <li>
+                İnsan hüquqlarının qorunması vasitələri haqqında daha məlumatlı
+                olacaqsınız
+              </li>
+            </ul>
+
+            <button type="button" onclick="nextPage()" class="continue_btn">
+              İrəli
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="page page--next" id="page2">
+        <div class="quiz_container_main">
+          <div class="quiz_start position-relative">
+            <h3 class="text-center w-100">Giriş testi</h3>
+            <hr class="hr bg-dark" />
+            <div>
+              <div class="mb-4">
+                Mövzu ilə bağlı yeni məlumat təqdim etməmişdən əvvəl, insan
+                hüquqları ilə bağlı bildiklərinizi yoxlayaq. Nəticələriniz heç
+                kimlə paylaşılmayacaq – bu test yalnız özünüz üçündür.
+              </div>
+              <div class="mb-4">
+                Bu, doğru və ya yanlış oyunudur. Ümumilikdə, 12 sual var. Hər
+                suala "doğru" və ya "yanlış", sonra isə "göndər" düyməsini
+                basaraq cavab verin.
+              </div>
+              <div class="mb-4">
+                Başlamaq üçün <span class="text-danger">"BAŞLA"</span> düyməsini
+                klikləyin.
+              </div>
+            </div>
+
+            <h6
+              role="button"
+              onclick="nextPage()"
+              class="text-danger mt-5 font-weight-bold cursor-pointer"
+            >
+              BAŞLA
+            </h6>
+            <div role="button" onclick="prevPage()" class="prev-btn">
+              <i class="fas fa-arrow-left"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="page page--next" id="page3">
+        <div class="quiz_container_main text-center">
+        
+          <form id="myForm" class="form-signin position-relative">
+            <div role="button" onclick="prevPage()" class="prev-btn">
+              <i class="fas fa-arrow-left"></i>
+            </div>
+            <h2 class="form-signin-heading mb-4">Please fill the blanks</h2>
+            <input
+              type="text"
+              class="form-control mb-3"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+              autofocus
+            />
+            <input
+              type="text"
+              class="form-control mb-3"
+              id="surname"
+              name="surname"
+              placeholder="Surname"
+              required
+            />
+            <input
+              type="text"
+              class="form-control mb-3"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              name="phone"
+              placeholder="Phone"
+              required
+            />
+            <button type="button" onclick="nextPage()" id="continueButton" class="continue_btn" disabled>
+              İrəli
+            </button>
+          </form>
+        </div>
+      </div>
+
+
+      <!-- <button
+      class="btn continue_btn btn-lg mt-3 btn-block"
+      id="submitBtn"
+      type="submit"
+    >
+      Submit
+    </button> -->
+
+      <div class="page page--next" id="page4">
+        <form id="myForm">
+          <div class="quiz_main">
+            <div class="quiz_container">
+             
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="page page--next" id="page5">
+        <div class="w-100 p-3 p-md-5">
+          <div role="button" onclick="prevPage()" class="prev-btn-txt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div class="font-weight-bold mb-3">
+            Bu gün biz insan hüquqlarının nə olduğunu, haradan gəldiyini və nə
+            üçün lazım olduğunu anlamağa çalışacağıq.
+          </div>
+          <div class="font-weight-bold mb-3">
+            İnsan hüquqları həyatımızın elə ayrılmaz hissəsidir ki, onları hər
+            zaman təbii qəbul edirik. İnsan hüquqları ideyasının əsasında
+            dayanan iki başlıca dəyər: insan ləyaqəti və bərabərlikdir.
+          </div>
+          <div class="font-weight-bold mb-3">
+            İnsan hüquqları layiqli həyat üçün vacib olan əsas standartlar kimi
+            başa düşülə bilər; onların universallığı isə, ən azından bu sahədə
+            bütün insanların bərabər olması ilə bağlıdır. Biz onların arasında
+            ayrı-seçkilik etməməliyik və edə bilmərikdə. Bu iki inam və ya
+            dəyər, həqiqətən də, özünü insan hüquqları ideyasına həsr etmək üçün
+            tələb olunan hər şeyi əhatə edir və onlar mübahisəli deyil. Buna
+            görə də, insan hüquqları dünyadakı hər mədəniyyət, hər sivil hökumət
+            və hər əsas dindən dəstək alır. Demək olar ki, hər yerdə dövlət öz
+            gücünü məhdudiyyət qoyulmadan və ya birtərəfli qaydada tətbiq edə
+            bilməz; bütün insanların müəyyən minimum insan ləyaqəti tələblərinə
+            uyğun şəkildə yaşaya bilməsi üçün dövlətin gücünə müvafiq səviyyədə
+            məhdudiyyət qoyulur.
+          </div>
+          <div class="font-weight-bold mb-3">
+            Bu iki fundamental dəyərdən bir çox digər dəyərlər çıxarıla və onlar
+            insanların və cəmiyyətlərin praktikada necə birgə mövcud olmasını
+            daha dəqiq şəkildə müəyyən etməyə kömək ola bilər. Məsələn, azadlıq:
+            çünki insan iradəsi insan ləyaqətinin mühüm tərkib hissəsidir.
+            İradəmizin əksinə nəyisə etməyə məcbur olunmaq bizi ruhdan salır.
+            Digərlərinə hörmət: çünki istənilən şəxsə qarşı hörmətin
+            çatışmazlığı onun fərdiliyinin və ləyaqətinin dəyərləndirilməməsinə
+            səbəb olur. Ayrı-seçkiliyə yol verilməməsi: çünki insan ləyaqəti ilə
+            bağlı bərabərlik o deməkdir ki, biz digər insanların hüquq və
+            imkanlarını onların xüsusiyyətləri əsasında mühakimə etməməliyik.
+            Dözümlülük: çünki dözümsüzlük fərqliliyə hörmətin çatışmaması
+            deməkdir; bərabərlik eynilik demək deyil. Ədalət: çünki bərabər
+            insanlar ədalətli rəftara layiqdir. Məsuliyyət: çünki digərlərinin
+            hüquqlarına hörmət şəxsin hərəkətlərində bütün hüquqların təmin
+            edilməsinə səy göstərilməsi ilə bağlı məsuliyyət doğurur.
+          </div>
+          <div class="font-weight-bold mb-3">
+            İnsan hüquqları azadlıq, bərabərlik, qarşılıqlı hörmət və ədalət
+            kimi dəyərlərə əsaslanır. Bu dəyərlər təsadüfi seçilmir, çünki
+            insanın ləyaqətlə yaşaya biləcəyi şəraiti məhz onlar yaradır. İnsan
+            hüquqları üçün nəzərdə tutulan təsnifat bu hüquqları neqativ və
+            pozitiv hüquqlar olaraq ikiyə bölür. Neqativlik və pozitivlik yaxşı,
+            ya da pis olma mənasında deyil, çünki hüquq yaxşı və ya pis, ola
+            bilməz. Burada dövlətin konkret hüquqa qarşı hansı mövqedə duracağı
+            nəzərdə tutulur – dövlət konkret hüququ təmin etmək üçün hərəkətsiz
+            qalıb müdaxilə etməməli (qarışmamalı), yoxsa tam əksinə, hüququ
+            təmin etmək üçün nəsə etməlidir?
+          </div>
+
+          <div class="font-weight-bold mb-3">
+            Azadlıq hüququ, yaxud söz azadlığı baxımından dövlət müdaxilə
+            etməməli, sizin həyatınızaqarışmamalı və onun məmuru gəlib sizin
+            qapınızı döyməməlidir. Lakin təhsil hüququnun ya da mənzil hüququnun
+            təmini üçün dövlət məktəb açmalı ya da kooperativ mənzillərin
+            tikintisinə şərait yaratmalıdır.
+          </div>
+          <div class="font-weight-bold mb-3">
+            Əvvəllər hesab olunurdu ki, birinci nəsil hüquqlar neqativ hüquqlar,
+            ikinci nəsil hüquqlar isə pozitiv hüquqlardır. Bu yanaşma tərzi bir
+            zamanlar düzgün hesab oluna bilərdi. Lakin İnsan Hüquqları üzrə
+            Avropa Məhkəməsinin presedent hüququ neqativ hüquqlar baxımından da
+            dövlətin pozitiv öhdəliklərini bəyan etməyə başladı. Məsələn,
+            yaşamaq hüququna hörmət edən dövlət öz məmurları tərəfindən
+            vətəndaşın həyatına qəsd etməməlidir, bu, neqativ öhdəlikdir. Lakin
+            əgər vətəndaş ehtimal olunan cinayətə qarşı dövlətdən qoruma tələb
+            edirsə, dövlətin həmin vətəndaşı qoruma kimi bir öhdəliyi yaranır və
+            bu pozitiv öhdəlikdir. Ona görə də indi neqativ-pozitiv hüquq
+            təsnifatından daha çox, dövlətin neqativ və pozitiv öhdəliklərindən
+            bəhs olunur. Bununla belə, din azadlığı, azadlıq hüququ, məlumat
+            yayma azadlığı kimi hüquqlara hələ də sırf neqativ hüquq kimi
+            yanaşmaq mümkündür.
+          </div>
+          <button type="button" onclick="nextPage()" class="continue_btn">
+            İrəli
+          </button>
+        </div>
+      </div>
+      <div class="page page--next" id="page6">
+        <div class="p-3 p-md-5">
+          <div role="button" onclick="prevPage()" class="prev-btn-txt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <h5 class="mt-2 mb-4">Kurs aşağıdakı məzmunu əhatə edir:</h5>
+          <h5 class="mt-5 mb-1">Birinci nəsil (şəxsi (mülki)) hüquqlar:</h5>
+          <div class="mb-5">
+            Şəxsi (mülki) hüquqlar hər kəsə aiddir. Bu hüquqa vətəndaşlığından,
+            cinsindən, yaşından, irqi, etnik və ya dini mənsubiyyətindən asılı
+            olmayaraq, doğulduğu andan hər kəs sahibdir.
+          </div>
+          <h5 class="mt-5 mb-1">
+            Şəxsi hüquqlara aşağıdakı hüquqlar aid edilir:
+          </h5>
+          <ul>
+            <li>Yaşamaq hüququ;</li>
+            <li>
+              Yalnız məhkəmə tərəfindən cəza almaq hüququ – məhkəmədən kənar
+              cəzalar qadağandır;
+            </li>
+            <li>Şəxsiyyətin toxunulmazlığı;</li>
+            <li>Hərəkət və yaşayış yeri seçmək azadlığı;</li>
+            <li>Mənzil toxunulmazlığı;</li>
+            <li>Yazışma toxunulmazlığı;</li>
+            <li>Məcburi əməyin qadağan olunması;</li>
+            <li>
+              Mülkiyyətin toxunulmazlığı (bəzən bu hüquq iqtisadi hüquqlara aid
+              edilir);
+            </li>
+            <li>Şəxsin ləyaqət hüququ;</li>
+            <li>Vicdan və din azadlığı;</li>
+            <li>Şəxsiyyətin fərdi hüquqlarının tanınması;</li>
+            <li>Sığınacaq hüququ;</li>
+            <li>Vətəndaşlıq hüququ;</li>
+            <li>Ailə qurmaq hüququ;</li>
+            <li>Əmlaka sahib olmaq hüququ.</li>
+          </ul>
+
+          <h5 class="mt-5 mb-1">İkinci nəsil (siyasi) hüquqlar:</h5>
+          <ul>
+            <li>
+              Vicdan azadlığı hüququ – vətəndaşların istədikləri dinə etiqad
+              etmək və ya heç bir dini qəbul etməmək hüququ;
+            </li>
+            <li>Söz və mətbuat azadlığı – senzuraya qadağa;</li>
+            <li>
+              Sərbəst toplaşmaq azadlığı – insanların öz düşüncələrini ifadə
+              etmək, təbliğ etmək, davam etdirmək və müdafiə etmək məqsədilə
+              siyasi və ictimai fəallığını həyata keçirmək azadlığı;
+            </li>
+            <li>Birləşmək azadlığı – birləşmək, ittifaq qurmaq azadlığı;</li>
+            <li>
+              Tətil etmək hüququ – hər kəsin təkbaşına və ya başqaları ilə
+              birlikdə tətil etmək hüququ vardır;
+            </li>
+            <li>
+              Müraciət etmək hüququ – vətəndaşların dövlət orqanlarına şəxsən
+              müraciət etmək, habelə fərdi və kollektiv yazılı müraciətlər
+              göndərmək hüququ vardır;
+            </li>
+            <li>Dövlətin idarə edilməsində iştirak etmək hüququ</li>
+          </ul>
+
+          <h5 class="mt-5 mb-1">Üçüncü nəsil (sosial-iqtisadi) hüquqlar:</h5>
+          <ul>
+            <li>Əmək hüququ;</li>
+            <li>Ailə hüququ, analıq hüququ, atalıq hüququ, uşaqlıq hüququ;</li>
+            <li>Sosial təminat hüququ;</li>
+            <li>Mülkiyyət hüququ;</li>
+            <li>Sağlamlığın qorunması və tibbi yardım hüququ;</li>
+            <li>
+              Səkkiz saatlıq iş hüququ, ədalətli iş şəraiti, dəyəri bərabər
+              əməyə görə bərabər ödəniş hüququ.
+            </li>
+          </ul>
+
+          <div class="my-3">
+            İqtisadi hüquqlara azad sahibkarlıq hüququ, işəgötürənlər və işçilər
+            arasında kollektiv müqavilə bağlamaq hüququ, öz maraqlarının
+            müdafiəsi üçün milli və beynəlxalq təşkilatlarda müstəqil birləşmək
+            hüququ və s. hüquqlar aiddir.
+          </div>
+          <div class="mb-3">
+            Üçüncü nəsil (sosial-iqtisadi) hüquqların həcmi, həyata keçirilmə
+            səviyyəsi xeyli dərəcədə dövlətin iqtisadiyyatından və
+            ehtiyatlarından asılıdır. Buna görə də onların həyata keçirilməsinin
+            təminatları siyasi və mülki hüquqlarla müqayisədə daha az inkişaf
+            etmişdir.
+          </div>
+          <div class="mb-3">
+            Dördüncü nəsil (mədəni) hüquqlar: Mədəni hüquqlar insanın mənəvi
+            inkişafına təminat verir, hər bir fərdə siyasi, mənəvi, sosial və
+            mədəni tərəqqinin faydalı iştirakçısı olmaqda kömək edir
+          </div>
+          <h5 class="mt-5 mb-1">Mədəni hüquqlara aiddir:</h5>
+          <ul>
+            <li>
+              Ana dilindən istifadə hüququ – hər kəsin ana dilindən istifadə
+              etmək hüququ vardır. Hər kəsin istədiyi dildə tərbiyə və təhsil
+              almaq, yaradıcılıqla məşğul olmaq hüququ vardır.
+            </li>
+            <li>
+              Təhsil almaq hüququ – hər bir vətəndaşın təhsil almaq hüququ
+              vardır.
+            </li>
+            <li>
+              İncəsənət və elmlə məşğul olmaq azadlığı – hər kəs istədiyi növ
+              incəsənət və elmlə məşğul ola bilər.
+            </li>
+            <li>Tədris etmək azadlığı.</li>
+          </ul>
+          <h5 class="mt-5 mb-1">Beşinci nəsil (ekoloji) hüquqlar:</h5>
+          <ul>
+            <li>Əlverişli ətraf mühit hüququ;</li>
+            <li>
+              Ətraf mühitin vəziyyətinə dair etibarlı məlumatların əldə edilməsi
+              hüququ;
+            </li>
+            <li>
+              Ekoloji qanun pozuntuları nəticəsində sağlamlığa və ya əmlaka
+              dəyən ziyanın ödənilməsi hüququ.
+            </li>
+          </ul>
+          <button type="button" onclick="nextPage()" class="continue_btn">
+            İrəli
+          </button>
+        </div>
+      </div>
+      <div class="page page--next" id="page7">
+        <div class="p-3 p-md-5">
+          <div role="button" onclick="prevPage()" class="prev-btn-txt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div>
+            Beləliklə, insan hüquqları insan ləyaqətini qoruyub saxlamaq, yəni
+            yaşamaq, öz həyatını müstəqil idarə etmək üçün əsas şərtləri təmin
+            edir
+          </div>
+          <div class="my-3">
+            Təbii hüquq məktəbi ilə sıx bağlı olan təbii hüquqlar nəzəriyyəsinə
+            görə, insan hüquqları dövlətdən öncə var olub və ondan əvvəl gəlir.
+          </div>
+          <div>
+            Dövlət bunları yaratmır, ancaq müəyyən edir. Siyasi cəmiyyət
+            xaricində də bu hüquqlar olub və olmaqda davam edəcək. Bu hüquqlara
+            insan sırf insan olduğuna görə sahibdir. Ona görə də insan
+            hüquqlarına bəzən şəxsdən ayrılmaz hüquqlar deyilir. Dövlətdən əvvəl
+            və üstün olan hüquqdan bəhs edərkən, insan hüquqlarının hamısı bu
+            mahiyyətdə deyil. Bəzi hüquqlar bizə dövlət tərəfindən verilir və
+            dövlət olmadan bu hüquqların təmin edilməsi mümkün deyil. Bu
+            hüquqlara iqtisadi və sosial hüquqlar aiddir. Bu hüquqlar da insanın
+            cəmiyyət halında yaşaması, ləyaqətli şəkildə şəxsiyyət kimi
+            formalaşması üçün tələb olunan hüquqlardır. İnsan hüquqlarının
+            xüsusiyyətlərindən biri də, bu hüquqların ayrılmaz, imtina oluna
+            bilməz və başqasına keçməyən hüquq olmasıdır, insan hüquqları
+            bölünməz, qarşılıqlı asılı və əlaqəlidir, insan hüquqları
+            universaldır (hər yerdə tətbiq edilir). Gəlin, bu anlayışların daha
+            detallı izahı ilə tanış olaq.
+          </div>
+          <button type="button" onclick="nextPage()" class="continue_btn">
+            İrəli
+          </button>
+        </div>
+      </div>
+      <div class="page page--next" id="page8">
+        <div class="p-3 p-md-5">
+          <div role="button" onclick="prevPage()" class="prev-btn-txt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div>İnsan hüquqları alına bilməz</div>
+          <div>
+            Belə olmasının səbəbi insanın insan olmasından irəli gəlir. Məsələn,
+            yaşamaq hüququ ayrılmaz olduğuna görə, hətta ağır cinayət törətmiş
+            şəxslərin belə həyatı alına bilməz.
+          </div>
+          <div class="my-3">
+            Digər bir misal, əgər hansısa şəxs cinayət törətməkdə təqsirli
+            bilinərsə, onun azadlıq hüququ müvəqqəti əlindən alına bilər; yaxud
+            milli fövqəladə halla bağlı hökumət bəyan etməklə müəyyən hüquqların
+            təmin olunmasını dayandıra bilər, məsələn, komendant saatı tətbiq
+            etməklə hərəkət azadlığını məhdudlaşdıra bilər.
+          </div>
+          <div class="mb-5">
+            Dünyada insan hüquqlarının əsas mənbələrindən biri sayılan Mülki və
+            Siyasi Hüquqlar haqqında Beynəlxalq Pakt bir sıra hüquqların
+            aşağıdakı hallarda məhdudlaşdırılmasının mümkünlüyüni qeyd edir:
+          </div>
+          <ul>
+            <li>Milli təhlükəsizlik;</li>
+            <li>ictimai asayişin təmin olunması;</li>
+            <li>əhalinin sağlamlığının qorunması;</li>
+            <li>ictimai əxlaqın qorunması;</li>
+            <li>başqalarının hüquq və azadlıqlarının qorunması</li>
+          </ul>
+          <h5 class="my-3">
+            Misal üçün, qeyd edilən hallar olduqda aşağıdakı hüquqlar
+            məhdudlaşdırıla bilər:
+          </h5>
+          <ol>
+            <li>Hərəkət azadlığı;</li>
+            <li>Öz dininə və ya əqidəsinə etiqad etmək azadlığı;</li>
+            <li>İfadə azadlığı</li>
+            <li>Sərbəst toplaşmaq azadlığı;</li>
+            <li>Vətəndaş olmayan şəxsin ölkədən çıxarılması;</li>
+            <li>Birləşmək azadlığı;</li>
+            <li>
+              Mətbuatın və ictimaiyyətin cinayət və ya mülki mühakimə
+              icraatından kənarlaşdırılması və sair.
+            </li>
+          </ol>
+          <button type="button" onclick="nextPage()" class="continue_btn">
+            İrəli
+          </button>
+        </div>
+      </div>
+      <div class="page page--next" id="page9">
+        <div class="p-3 p-md-5">
+          <div role="button" onclick="prevPage()" class="prev-btn-txt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div>İnsan hüquqları bölünməz, qarşılıqlı asılı və əlaqəlidir</div>
+          <div>
+            Bu, o deməkdir ki, müxtəlif insan hüquqları daxilən bir-biri ilə
+            əlaqəlidir və bir-birindən ayrı nəzərdən keçirilə bilməz.
+          </div>
+          <div class="mb-4">
+            Bir hüququn təmin olunması bir çox digər hüquqlardan da asılıdır və
+            heç bir insan hüququ digərlərindən daha əhəmiyyətli deyil.
+          </div>
+          <div>İnsan hüquqları universaldır</div>
+          <div class="mb-1">
+            Bu, deməkdir ki, insan hüquqları dünyadakı bütün insanlara vaxt
+            məhdudiyyəti qoyulmadan bərabər şəkildə şamil olunur. Hər bir
+            insanın “irqi” və ya etnik mənşəyi, dərisinin rəngi, cinsi,
+            əlilliyi, dili, dini, siyasi və ya digər baxışları, milli və ya
+            sosial mənşəyi, anadanolma və ya digər statusuna görə fərq
+            qoyulmadan öz hüquqlarından istifadə etmək haqqı vardır. Bəzi insan
+            hüquqları digərləri ilə rəqabət aparır. Belə hallarda hüquqların
+            bir-birinə qarşı balanslaşdırılması tələb oluna bilər. Bununla belə,
+            heç bir halda məhdudlaşdırıla, dayandırıla və alına bilməyən
+            hüquqlar (mütləq hüquqlar) aşağıdakılardır:
+          </div>
+          <ol>
+            <li>
+              İşgəncə və digər qəddar, qeyri-insani və ya ləyaqəti alçaldan
+              rəftar və ya cəzaya məruz qalmamaq hüququ;
+            </li>
+            <li>Köləlikdən azad olmaq;</li>
+            <li>
+              Müqavilə öhdəliyini yerinə yetirmədiyinə görə həbsdən azad olunma;
+            </li>
+            <li>Cinayət qanununun geriyə qüvvəsinin olmaması;</li>
+            <li>Qanun qarşısında bərabərlik.</li>
+          </ol>
+          <button type="button" onclick="nextPage()" class="continue_btn">
+            İrəli
+          </button>
+        </div>
+      </div>
+      <div class="page page--next" id="page10">
+        <div class="p-3 p-md-5">
+          <div role="button" onclick="prevPage()" class="prev-btn-txt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div>İnsan hüquqlarının tarixi</div>
+          <div>
+            İnsan hüquqları tarix boyu inkişaf edib. Gəlin, tarixə aid bir neçə
+            mühit insan hüquqları sənədləri ilə tanış olaq:
+          </div>
+          <ul>
+            <li>
+              Kir Xartiyası (İran, təqribən eramızdan əvvəl 539-cu il) Fars
+              hökmdarı Kir tərəfindən ölkəsinin xalqı üçün tərtib edilmişdi.
+              Xartiya xalqın azadlıq və təhlükəsizlik hüququnu, dini
+              dözümlülüyü, hərəkət azadlığını, köləlikdən azadlığı, müəyyən
+              sosial və iqtisadi hüquqlarını tanıyırdı.
+            </li>
+            <li>
+              1215-ci ildə İngiltərə zadəganları və ruhani təbəqənin üzvləri
+              Azadlıqların Böyük Xartiyasını (Maqna Karta) hazırlamaqla
+              İngiltərə Kralını qanuna əməl etməyə məcbur etdilər. Maqna Karta
+              yalnız imtiyazlı təbəqənin (zadəganların) hüquqlarını qoruyurdu,
+              buna görə də, özlüyündə insan hüquqları barəsində deyildi. Bu
+              sənəd kralın gücünə məhdudiyyət qoyduğundan və digər insanların
+              hüquq və azadlıqlarını tanıdığından azadlıqların müdafiəsi zamanı
+              geniş şəkildə istinad edilən mənbəyə çevrildi.
+            </li>
+            <li>
+              1689-cu ildə İngiltərə parlamenti Bill (qanun) qəbul etdi.
+              Hüquqlar Billi kimi tanınan bu sənəd monarxın Parlamentin razılığı
+              olmadan qanunu ləğv etməsini qadağan etdi, Parlament üzvlərinin
+              azad seçkilərlə seçiləcəyini müəyyənləşdirdi, eləcə də
+              Parlamentdə, məhkəmələrdə və ya digər yerlərdə söz azadlığının
+              sual altına alına bilməyəcəyini bəyan etdi.
+            </li>
+            <li>
+              1776-cı ildə Şimali Amerikadakı əksər Britaniya müstəmləkələri
+              Birləşmiş Ştatların Azadlıq Bəyannaməsində Britaniya
+              İmperiyasından öz müstəqilliklərini elan etdilər. Bəyannamədə
+              hökumət gücünün saxlanması və azadlığın qorunmasının vacibliyi
+              inamına əsaslanmaqla müvafiq anlayışların inkişaf etdirilməsi
+              təmin olundu: ayrılmaz hüquqlar; fərdi hüquqların qorunması; söz,
+              mətbuat, petisiya və toplaşmaq azadlığı; qanun qarşısında
+              bərabərlik və din azadlığı.
+            </li>
+            <li>
+              Ən vacib sənədlərdən biri İnsan Hüquqları haqqında Bəyannamə
+              (İHÜB) 1948-ci il dekabrın 10-da BMT Baş Assambleya tərəfindən
+              qəbul olunmuşdur. Hüquqi cəhətdən öhdəlik yaratmasa da, İHÜB
+              milli, regional və ya beynəlxalq səviyyədə insan hüquqları üzrə
+              çoxsaylı öhdəliklər üçün ilham qaynağı olmuşdur.
+            </li>
+          </ul>
+
+          <button type="button" onclick="nextPage()" class="continue_btn">
+            İrəli
+          </button>
+        </div>
+      </div>
+      <div class="page page--next" id="page11">
+        <div class="p-3 p-md-5">
+          <div role="button" onclick="prevPage()" class="prev-btn-txt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div>Azərbaycanda insan hüquqlarının təminatı</div>
+          <div class="mb-5">
+            Azərbaycan Respublikasının 1995-ci il noyabrın 12-də ümumxalq
+            səsverməsi yolu ilə qəbul edilmiş Konstitusiyasında insan və
+            vətəndaş hüquqlarının və azadlıqlarının təmin edilməsi dövlətimizin
+            ali məqsədi kimi bəyan edilmişdir (maddə 12). Konstitusiyanın «Əsas
+            insan və vətəndaş hüquqları və azadlıqları» adlanan III fəslinin
+            (24-72 maddələr) bütün mətni insana, insan ləyaqətinə, insan
+            hüquqlarına hörmət ruhunda tərtib olunmuşdur.
+          </div>
+
+          <div>
+            Konstitusiyanın 24-cü maddəsində insan və vətəndaş hüquqlarının və
+            azadlıqlarının əsas prinsipləri sadalanır:
+          </div>
+          <ol type="I">
+            <li>İnsan ləyaqəti qorunur və ona hörmət edilir.</li>
+            <li>
+              Hər kəsin doğulduğu andan toxunulmaz, pozulmaz və ayrılmaz
+              hüquqları və azadlıqları vardır.
+            </li>
+            <li>
+              Hüquqlar və azadlıqlar hər kəsin cəmiyyət və başqa şəxslər
+              qarşısında məsuliyyətini və vəzifələrini də əhatə edir.
+              Hüquqlardan sui-istifadəyə yol verilmir.
+            </li>
+          </ol>
+          <div class="mt-5">
+            Bundan başqa, Konstitusiyamızda onlarca hüquq əks olunub (yaşamaq
+            hüququ, bərabərlik hüququ, insan və vətəndaş hüquqlarının və
+            azadlıqlarının müdafiəsi hüququ, azadlıq hüququ, mülkiyyət hüququ və
+            s.). Bu hüquqların təmin edilməsi üçün hüquq-mühafizə orqanları,
+            məhkəmələr, İnsan hüquqları üzrə müvəkkil (ombudsman) və digər
+            qurumlar yaradılmışdır.
+          </div>
+          <button type="button" onclick="nextPage()" class="continue_btn">
+            İrəli
+          </button>
+        </div>
+      </div>
+      <div class="page page--next" id="page12">
+        <div class="p-3 p-md-5">
+          <div role="button" onclick="prevPage()" class="prev-btn-txt">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div>
+            İnsan hüquqlarınız pozulduğu halda, nə etməli olduğunuzu
+            bilirsinizmi?
+          </div>
+          <div class="mb-5">
+            Hüquqlarınız pozulduğu təqdirdə inzibati və hüquqi mexanizmlərdən
+            istifadə edə bilərsiniz:
+          </div>
+          <ul>
+            <li>Daxili İşlər Nazirliyi (polis);</li>
+            <li>Ombudsman;</li>
+            <li>məhkəmələr;</li>
+            <li>Azərbaycan Respublikası Prezidentinin Administrasiyası;</li>
+            <li>vətəndaş cəmiyyəti qurumları;</li>
+            <li>kütləvi informasiya vasitələri və s.</li>
+          </ul>
+          <div class="my-5">
+            Hər bir ölkədə insanlar öz pozulmuş hüquqlarını təkcə məhkəmələrə
+            müraciət etməklə bərpa etmirlər. Hər bir ölkənin konstitusiyasında,
+            yaxud müvafiq normativ sənədlərində insanların müxtəlif dövlət
+            orqanlarına ərizə və şikayətlə müraciət etmək hüququ təsbit olunur.
+            Hər bir şəxs fərdi qaydada, yaxud başqaları ilə birlikdə istənilən
+            dövlət orqanına və vəzifəli şəxsə müraciət etməklə öz pozulmuş
+            hüququnu bərpa edə, yaxud hər hansı bir problemlə bağlı təklif verə
+            bilər. Azərbaycan Respublikası Konstitusiyasının 51-ci maddəsinin
+            birinci hissəsinə əsasən, Azərbaycan Respublikası vətəndaşlarının
+            dövlət orqanlarına şəxsən müraciət etmək, habelə fərdi və kollektiv
+            yazılı müraciətlər göndərmək hüququ vardır. Hər bir müraciətə
+            qanunla müəyyən edilmiş qaydada və müddətlərdə (30 günədək) yazılı
+            cavab verilməlidir. Vətəndaşların dövlət orqanlarına müraciətləri
+            ilə bağlı məsələlər «Vətəndaşların müraciətlərinə baxılması qaydası
+            haqqında» Qanunla tənzimlənir.
+          </div>
+          <div class="mb-5">
+            Qeyd etmək lazımdır ki, vətəndaşlar inzibati xətalar haqqında işlər
+            üzrə icraat qaydasında da müvafiq dövlət orqanlarına müraciət edərək
+            pozulmuş hüquq və azadlıqlarının bərpasını tələb edə bilərlər (bu
+            məsələ İnzibati Xətalar Məcəlləsi ilə tənzimlənir).
+          </div>
+          <button type="button" onclick="nextPage()" class="continue_btn">
+            Yekun testlərə keçid
+          </button>
+        </div>
+      </div>
+      <div class="page page--next" id="page13">
+        <form id="myForm">
+          <div class="quiz_variant_container"></div>
+        </form>
+      </div>      
+      <div class="page page--next" id="page14">
+        <div class="quiz_container_main text-center">
+          <div class="message_container">
+            <h1 class="mb-5"></h1>
+            <button onclick="homePageUrl()" class="continue_btn">Ana səhifəyə qayıt</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+    <script src="/index.js"></script>
+    <script src="/questions.js"></script>
+   </body>
+</html>
